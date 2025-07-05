@@ -24,9 +24,7 @@ fi
 : "${N8N_USER:=yourUser}"
 : "${N8N_PASSWORD:=yourPass}"
 
-echo "→ Sleeping 60s to let cloud-init finish any apt work…"
-sleep 60
-
+echo "→ Starting n8n setup for ${SUBDOMAIN} on ${DOMAIN}…"
 echo "→ Repairing interrupted dpkg installs (if any)…"
 dpkg --configure -a || true
 
