@@ -12,6 +12,8 @@ function usage() {
   exit 1
 }
 
+echo "→ Starting n8n setup for ${SUBDOMAIN} 
+
 SUBDOMAIN="${1:-}"
 DOMAIN="${2:-}"
 DO_TOKEN="${3:-}"
