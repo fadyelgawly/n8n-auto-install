@@ -6,12 +6,13 @@ IFS=$'\n\t'
 
 
 
-echo "→ Starting n8n setup for ${SUBDOMAIN}"
 
 SUBDOMAIN="${1:-}"
 DOMAIN="${2:-}"
 DO_TOKEN="${3:-}"
 
+
+echo "→ Starting n8n setup for ${SUBDOMAIN}"
 
 # Optional basic auth override
 : "${N8N_USER:=yourUser}"
