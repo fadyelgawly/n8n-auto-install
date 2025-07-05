@@ -16,7 +16,7 @@ SUBDOMAIN="${1:-}"
 DOMAIN="${2:-}"
 DO_TOKEN="${3:-}"
 
-if [[ -z "$SUBDOMAIN" || -z "$DOMAIN" ]]; then
+if [[ -z "$SUBDOMAIN" ]]; then
   usage
 fi
 
