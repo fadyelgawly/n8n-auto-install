@@ -4,21 +4,29 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-
-
+function usage() {
+  echo "Usage: $0 <subdomain> <domain> [do_api_token]"
+  echo "  <subdomain>     e.g. n8n.yourdomain.com"
+  echo "  <domain>        e.g. yourdomain.com"
+  echo "  [do_api_token]  optional: for automatic DNS A-record"
+  exit 1
+}
 
 SUBDOMAIN="${1:-}"
 DOMAIN="${2:-}"
 DO_TOKEN="${3:-}"
 
-
-echo "→ Starting n8n setup for ${SUBDOMAIN}"
+if [[ -z "$SUBDOMAIN" || -z "$DOMAIN" ]]; then
+  usage
+fi
 
 # Optional basic auth override
 : "${N8N_USER:=yourUser}"
 : "${N8N_PASSWORD:=yourPass}"
 
-echo "→ Starting n8n setup for ${SUBDOMAIN} on ${DOMAIN}…"
+echo "→ Sleeping 60s to let cloud-init finish any apt work…"
+sleep 60
+
 echo "→ Repairing interrupted dpkg installs (if any)…"
 dpkg --configure -a || true
 
