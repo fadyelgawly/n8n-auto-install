@@ -13,6 +13,7 @@ Reminder: You will have keys in a .env file on your system after this proccess. 
 env_vars['N8N_EDITOR_BASE_URL'] = 'http://localhost:5678'
 env_vars['WEBHOOK_URL'] = 'http://localhost:5678'
 env_vars["GENERIC_TIMEZONE"] = str(local_timezone) or "America/New_York"
+env_vars['N8N_SECURE_COOKIE'] = false
 
 # --- Start n8n ---
 print("\nstarting n8n...")

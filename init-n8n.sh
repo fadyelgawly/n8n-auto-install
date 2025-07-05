@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-echo "Running n8n auto-install script..."
 set -euo pipefail
 IFS=$'\n\t'
 
@@ -16,6 +15,8 @@ while sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do
   echo "Waiting on apt lock..." >&2
   sleep 2
 done
+
+echo "Running n8n auto-install script..."
 
 apt-get update && apt-get upgrade -y
 apt-get install -y docker.io docker-compose ufw curl jq
