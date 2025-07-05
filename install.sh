@@ -175,7 +175,7 @@ fi
 # Clone the repository
 echo " "
 echo "Cloning the repository..."
-git clone https://github.com/liamdmcgarrigle/n8n-auto-install.git
+git clone https://github.com/fadyelgawly/n8n-auto-install.git
 echo "Repository successfully cloned"
 echo " "
 
