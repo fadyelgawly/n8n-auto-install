@@ -144,14 +144,6 @@ create_venv() {
 # Main execution
 echo " "
 echo "This script will install Git, Python, and set up a virtual environment for n8n-auto-install."
-echo "Do you want to proceed? (y/n): "
-read -r REPLY </dev/tty
-
-if [[ ! $REPLY =~ ^[Yy](es)?$ ]]
-then
-    echo "Installation cancelled."
-    exit 1
-fi
 
 # Check and install Python if necessary
 if ! command_exists python3; then
