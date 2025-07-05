@@ -4,13 +4,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-function usage() {
-  echo "Usage: $0 <subdomain> <domain> [do_api_token]"
-  echo "  <subdomain>     e.g. n8n.yourdomain.com"
-  echo "  <domain>        e.g. yourdomain.com"
-  echo "  [do_api_token]  optional: for automatic DNS A-record"
-  exit 1
-}
+
 
 echo "→ Starting n8n setup for ${SUBDOMAIN} 
 
