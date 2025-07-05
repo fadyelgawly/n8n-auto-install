@@ -14,13 +14,6 @@ function usage() {
 
 echo "→ Starting n8n setup for ${SUBDOMAIN} 
 
-SUBDOMAIN="${1:-}"
-DOMAIN="${2:-}"
-DO_TOKEN="${3:-}"
-
-if [[ -z "$SUBDOMAIN" ]]; then
-  usage
-fi
 
 # Optional basic auth override
 : "${N8N_USER:=yourUser}"
