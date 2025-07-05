@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "Running n8n auto-install script..."
 set -euo pipefail
 IFS=$'\n\t'
 
